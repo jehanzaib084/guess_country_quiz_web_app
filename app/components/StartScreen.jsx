@@ -1,14 +1,21 @@
 import React from 'react';
+import Image from 'next/image';
 
 const StartScreen = ({ onStart, quizTitle }) => {
   return (
-    <div
-      className="relative flex items-center justify-center rounded-lg p-6 w-full h-[85vh] shadow-lg"
-      style={{
-        backgroundImage: "url('/bg_image.webp')",
-      }}
-    >
-      <div className="relative flex flex-col items-center justify-center rounded-lg bg-white px-6 py-3 shadow-lg border border-[#CCE4FF] w-[360px]">
+    <div className="relative flex items-center justify-center rounded-lg p-6 w-full h-[85vh] shadow-lg overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/bg_image.webp"
+          alt="Geography quiz background"
+          fill
+          priority
+          sizes="100vw"
+          style={{objectFit: 'cover'}}
+        />
+      </div>
+      
+      <div className="relative z-10 flex flex-col items-center justify-center rounded-lg bg-white px-6 py-3 shadow-lg border border-[#CCE4FF] w-[360px]">
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 mb-2 rounded-lg bg-[#F7FAFD] border border-[#CCE4FF] px-3 py-1 text-sm">
           Geography & Travel
         </div>

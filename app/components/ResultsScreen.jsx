@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const ResultsScreen = ({ score, totalQuestions, onPlayAgain, quizTitle }) => {
   const scorePercentage = (score / (totalQuestions * 10)) * 100;
@@ -16,13 +17,18 @@ const ResultsScreen = ({ score, totalQuestions, onPlayAgain, quizTitle }) => {
       </div>
 
       {/* Result screen content */}
-      <div
-        className="relative flex items-center justify-center rounded-lg p-6 h-[85vh] shadow-lg"
-        style={{
-          backgroundImage: "url('/bg_image.webp')",
-        }}
-      >
-        <div className="relative flex flex-col items-center justify-center rounded-lg bg-[#FAFCFF] px-6 py-3 shadow-lg border border-[#CCE4FF] w-[380px]">
+      <div className="relative flex items-center justify-center rounded-lg p-6 h-[85vh] shadow-lg overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/bg_image.webp"
+            alt="Geography quiz background"
+            fill
+            sizes="100vw"
+            style={{objectFit: 'cover'}}
+          />
+        </div>
+        
+        <div className="relative z-10 flex flex-col items-center justify-center rounded-lg bg-[#FAFCFF] px-6 py-3 shadow-lg border border-[#CCE4FF] w-[380px]">
           <h1 className="font-bold text-md text-center">{quizTitle}</h1>
           
           <div className="relative size-60 my-4">
