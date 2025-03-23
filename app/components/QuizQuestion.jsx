@@ -35,7 +35,7 @@ const QuizQuestion = ({
       return style + "bg-white border-red-500 ring-1 ring-red-500";
     }
 
-    return style + "bg-white border-gray-300 opacity-75";
+    return style + "bg-white border-gray-300 opacity-75 hidden md:inline-block";
   };
 
   const showXMark = (option) => {
@@ -45,7 +45,7 @@ const QuizQuestion = ({
   return (
     <>
       {/* Header for Questions screen */}
-      <div className="flex rounded-t-lg justify-between items-center px-6 py-4">
+      <div className="flex rounded-t-lg justify-between items-center px-6 py-4 text-[14px] md:text-[16px]">
         <div>
           <h1 className="font-bold">Guess the Country Quiz</h1>
         </div>

@@ -69,7 +69,7 @@ export default function Home() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen p-4">
+    <div className="flex items-center justify-center min-h-screen lg:p-4">
       <div className="bg-white rounded-lg shadow-lg w-full max-w-3xl border border-[#CCE4FF]">
         {appState === "start" && (
           <StartScreen 

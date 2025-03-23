@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const StartScreen = ({ onStart, quizTitle }) => {
   return (
-    <div className="relative flex items-center justify-center rounded-lg p-6 w-full h-[85vh] shadow-lg overflow-hidden">
+    <div className="relative flex items-center justify-center rounded-lg p-6 w-full h-[100vh] md:[85vh] shadow-lg overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
           src="/bg_image.webp"
@@ -19,7 +19,7 @@ const StartScreen = ({ onStart, quizTitle }) => {
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 mb-2 rounded-lg bg-[#F7FAFD] border border-[#CCE4FF] px-3 py-1 text-sm">
           Geography & Travel
         </div>
-        <div className="mb-6 text-2xl pt-2 text-center">
+        <div className="mb-6 text-2xl pt-4 md:pt-2 text-center">
           {quizTitle}
         </div>
         <button 
