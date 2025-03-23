@@ -4,9 +4,9 @@ A Next.js web application that tests your knowledge of countries around the worl
 
 ## Features
 
-- Country flag identification quiz
-- Geography trivia challenges
+- Country neighbor identification quiz
 - Score tracking and statistics
+- Beautiful UI with animations
 - Responsive design for all devices
 
 ## Getting Started
@@ -33,15 +33,15 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to start t
 
 ## Tech Stack
 
-- [Next.js](https://nextjs.org/) - React framework
-- [React](https://reactjs.org/) - UI library
-- [Tailwind CSS](https://tailwindcss.com/) - Styling
+- [Next.js 15](https://nextjs.org/) - React framework
+- [React 19](https://reactjs.org/) - UI library
+- [Tailwind CSS 4](https://tailwindcss.com/) - Styling
 - [Vercel](https://vercel.com/) - Deployment
 
 ## How to Play
 
-1. Start the quiz by clicking the "Begin" button
-2. Identify the country from the displayed flag or hint
+1. Start the quiz by clicking the "Start" button
+2. Identify the country that borders both countries mentioned in the question
 3. Select your answer from the multiple choices
 4. View your score at the end of the quiz
 
@@ -58,4 +58,4 @@ This app can be easily deployed on [Vercel](https://vercel.com/new) with a few c
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+This project is licensed under the [MIT License](LICENSE) - see the LICENSE file for details.
