@@ -1,10 +1,10 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 
 const ResultsScreen = ({ score, totalQuestions, onPlayAgain, quizTitle }) => {
   const scorePercentage = (score / (totalQuestions * 10)) * 100;
   const dashOffset = 100 - scorePercentage;
-  
+
   return (
     <>
       {/* Header for result screen */}
@@ -24,31 +24,44 @@ const ResultsScreen = ({ score, totalQuestions, onPlayAgain, quizTitle }) => {
             alt="Geography quiz background"
             fill
             sizes="100vw"
-            style={{objectFit: 'cover'}}
+            style={{ objectFit: "cover" }}
           />
         </div>
-        
+
         <div className="relative z-10 flex flex-col items-center justify-center rounded-lg bg-[#FAFCFF] px-6 py-3 shadow-lg border border-[#CCE4FF] w-[380px]">
           <h1 className="font-bold text-md text-center">{quizTitle}</h1>
-          
+
           <div className="relative size-60 my-4">
-            <svg className="size-full -rotate-90" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="18" cy="18" r="16" fill="none" className="stroke-current text-gray-200" strokeWidth="3"></circle>
-              <circle 
-                cx="18" 
-                cy="18" 
-                r="16" 
-                fill="none" 
-                className="stroke-current text-[#14599D]" 
-                strokeWidth="3" 
-                strokeDasharray="100" 
-                strokeDashoffset={dashOffset} 
+            <svg
+              className="size-full -rotate-90"
+              viewBox="0 0 36 36"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="18"
+                cy="18"
+                r="16"
+                fill="none"
+                className="stroke-current text-gray-200"
+                strokeWidth="3"
+              ></circle>
+              <circle
+                cx="18"
+                cy="18"
+                r="16"
+                fill="none"
+                className="stroke-current text-[#14599D]"
+                strokeWidth="3"
+                strokeDasharray="100"
+                strokeDashoffset={dashOffset}
                 strokeLinecap="round"
               ></circle>
             </svg>
 
             <div className="absolute flex flex-col top-1/2 start-1/2 transform -translate-y-1/2 -translate-x-1/2">
-              <span className="text-center text-4xl font-bold text-[#14599D]">{score / 10} / {totalQuestions}</span>
+              <span className="text-center text-4xl font-bold text-[#14599D]">
+                {score / 10} / {totalQuestions}
+              </span>
               <span className="text-xs text-center">{score} points</span>
             </div>
 
@@ -58,11 +71,17 @@ const ResultsScreen = ({ score, totalQuestions, onPlayAgain, quizTitle }) => {
           </div>
 
           <div>
-            <button 
+            <button
               onClick={onPlayAgain}
-              className="mb-6 w-full rounded-md text-[#5C8DBD] px-4 py-2 text-sm border ring ring-offset-0 ring-[#CCE4FF] hover:ring-[#0B3259] hover:cursor-pointer focus:outline-none focus:ring-2"
+              className="flex align-center justify-center mb-6 w-full rounded-md text-[#5C8DBD] px-4 py-2 text-sm border ring ring-offset-0 ring-[#CCE4FF] hover:ring-[#0B3259] hover:cursor-pointer focus:outline-none focus:ring-2"
             >
-              <span>🔄️</span>
+              <Image
+                src="/reload.svg"
+                alt="Reload"
+                width={14}
+                height={14}
+                className="mr-1"
+              />
               <span>Play Again</span>
             </button>
           </div>

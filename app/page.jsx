@@ -11,7 +11,7 @@ export default function Home() {
   const questions = quiz;
   const QUIZ_TITLE = "Guess the Country by Its Neighbors Quiz";
   
-  const [appState, setAppState] = useState("start");
+  const [appState, setAppState] = useState("results");
 
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
