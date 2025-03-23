@@ -24,9 +24,18 @@ const StartScreen = ({ onStart, quizTitle }) => {
         <div className="flex w-full items-center justify-between text-sm font-medium">
           <div>20 Questions</div>
           <div className="flex items-center gap-2">
-            <span>Timer Bonus</span>
-            <label className="relative inline-flex cursor-pointer items-center">
-              <input type="checkbox" className="sr-only peer" />
+            <span id="timer-bonus-label">Timer Bonus</span>
+            <label 
+              htmlFor="timer-bonus" 
+              className="relative inline-flex cursor-pointer items-center"
+              aria-labelledby="timer-bonus-label"
+            >
+              <input 
+                type="checkbox" 
+                id="timer-bonus" 
+                className="sr-only peer" 
+                aria-labelledby="timer-bonus-label"
+              />
               <div className="h-6 w-11 rounded-full bg-[#C2C2C2] peer-checked:bg-[#0E3F70]"></div>
               <div className="absolute left-1 top-1 h-4 w-4 rounded-full bg-white transition peer-checked:translate-x-5 border border-black"></div>
             </label>
