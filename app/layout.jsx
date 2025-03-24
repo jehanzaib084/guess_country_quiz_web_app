@@ -8,8 +8,6 @@ export const metadata = {
   authors: [{ name: "FA22-BSE-084" }],
   creator: "FA22-BSE-084",
   publisher: "FA22-BSE-084",
-  viewport: "width=device-width, initial-scale=1",
-  themeColor: "#ffffff",
   openGraph: {
     title: "Country Quiz App | FA22-BSE-084",
     description: "Test your knowledge of countries around the world with this interactive quiz app.",

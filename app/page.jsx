@@ -3,9 +3,9 @@
 import { useState, useEffect } from "react";
 import quiz from "@/data/quiz_data.json";
 
-import StartScreen from "./components/StartScreen";
-import QuizQuestion from "./components/QuizQuestion";
-import ResultsScreen from "./components/ResultsScreen";
+import StartScreen from "./components/startCard";
+import QuizQuestion from "./components/quizQuestionCard";
+import ResultsScreen from "./components/resultsCard";
 
 export default function Home() {
   const questions = quiz;
